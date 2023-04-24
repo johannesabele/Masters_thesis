@@ -1,0 +1,89 @@
+Failure # 1 (occurred at 2023-03-31_21-25-18)
+[36mray::ImplicitFunc.train()[39m (pid=1404131, ip=172.29.16.1, repr=func)
+  File "/home/johannes/anaconda3/lib/python3.9/site-packages/ray/tune/trainable/trainable.py", line 367, in train
+    raise skipped from exception_cause(skipped)
+  File "/home/johannes/anaconda3/lib/python3.9/site-packages/ray/tune/trainable/function_trainable.py", line 335, in entrypoint
+    return self._trainable_func(
+  File "/home/johannes/anaconda3/lib/python3.9/site-packages/ray/tune/trainable/function_trainable.py", line 652, in _trainable_func
+    output = fn()
+  File "/tmp/ipykernel_1402165/2315748030.py", line 37, in train_ADNI
+  File "/tmp/ipykernel_1402165/2248850807.py", line 49, in train
+  File "/home/johannes/anaconda3/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/tmp/ipykernel_1402165/3087974896.py", line 78, in forward
+  File "<string>", line 2, in f
+  File "/home/johannes/anaconda3/lib/python3.9/site-packages/probtorch/stochastic.py", line 275, in variable
+    dist = Dist(*args, **kwargs)
+  File "/home/johannes/anaconda3/lib/python3.9/site-packages/torch/distributions/relaxed_categorical.py", line 112, in __init__
+    base_dist = ExpRelaxedCategorical(temperature, probs, logits, validate_args=validate_args)
+  File "/home/johannes/anaconda3/lib/python3.9/site-packages/torch/distributions/relaxed_categorical.py", line 38, in __init__
+    self._categorical = Categorical(probs, logits)
+  File "/home/johannes/anaconda3/lib/python3.9/site-packages/torch/distributions/categorical.py", line 64, in __init__
+    super(Categorical, self).__init__(batch_shape, validate_args=validate_args)
+  File "/home/johannes/anaconda3/lib/python3.9/site-packages/torch/distributions/distribution.py", line 55, in __init__
+    raise ValueError(
+ValueError: Expected parameter logits (Tensor of shape (64, 2)) of distribution Categorical(logits: torch.Size([64, 2])) to satisfy the constraint IndependentConstraint(Real(), 1), but found invalid values:
+tensor([[nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan],
+        [nan, nan]], device='cuda:0', grad_fn=<SubBackward0>)

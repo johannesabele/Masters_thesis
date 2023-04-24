@@ -1,13 +1,33 @@
 # Masters thesis 
 
-## Semi-supervised 
+This repository contains the source code for the Masters thesis written by Johannes Abele at the Charité - Berlin University of Medicine. The thesis is concerned with modelling the disease severity using semi- and weakly supervised variational autoencoders using data from [ADNI](https://adni.loni.usc.edu/about/). Both implementations are build on the probabilistic programming library [probtorch](https://github.com/probtorch/probtorch). All code can be run if the necessary datasets are available. Those need to be generated using ``ADNI_preprocessing.ipynb`` if one has access to full datasets as provided by ADNI.
 
-original code taken from https://github.com/probtorch
+Results from the random search for all classification and both supervision types can be found in ``ray_results``.  Some preliminary results can be found in ``Results``. 
 
-short example for MNIST is included under examples 
+## Copyright under BSD License 2.0
+Copyright 2023 Johannes Abele
 
-## Weakly supervised 
+Redistribution and use in source and binary forms, with or without 
+modification, are permitted provided that the following conditions are met:
 
-original code taken from https://github.com/google-research/disentanglement_lib
+1. Redistributions of source code must retain the above copyright notice, this
+list of conditions and the following disclaimer.
 
-short instructions given in README
+2. Redistributions in binary form must reproduce the above copyright notice, 
+this list of conditions and the following disclaimer in the documentation 
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors 
+may be used to endorse or promote products derived from this software without 
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED 
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE 
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR 
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.```

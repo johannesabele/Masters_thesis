@@ -1,0 +1,86 @@
+Failure # 1 (occurred at 2023-03-31_22-16-05)
+[36mray::ImplicitFunc.train()[39m (pid=1426408, ip=172.29.16.1, repr=func)
+  File "/home/johannes/anaconda3/lib/python3.9/site-packages/ray/tune/trainable/trainable.py", line 367, in train
+    raise skipped from exception_cause(skipped)
+  File "/home/johannes/anaconda3/lib/python3.9/site-packages/ray/tune/trainable/function_trainable.py", line 335, in entrypoint
+    return self._trainable_func(
+  File "/home/johannes/anaconda3/lib/python3.9/site-packages/ray/tune/trainable/function_trainable.py", line 652, in _trainable_func
+    output = fn()
+  File "/tmp/ipykernel_1402165/2315748030.py", line 37, in train_ADNI
+  File "/tmp/ipykernel_1402165/2248850807.py", line 49, in train
+  File "/home/johannes/anaconda3/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/tmp/ipykernel_1402165/3087974896.py", line 96, in forward
+  File "<string>", line 2, in f
+  File "/home/johannes/anaconda3/lib/python3.9/site-packages/probtorch/stochastic.py", line 275, in variable
+    dist = Dist(*args, **kwargs)
+  File "/home/johannes/anaconda3/lib/python3.9/site-packages/torch/distributions/normal.py", line 54, in __init__
+    super(Normal, self).__init__(batch_shape, validate_args=validate_args)
+  File "/home/johannes/anaconda3/lib/python3.9/site-packages/torch/distributions/distribution.py", line 55, in __init__
+    raise ValueError(
+ValueError: Expected parameter scale (Tensor of shape (32, 10)) of distribution Normal(loc: torch.Size([32, 10]), scale: torch.Size([32, 10])) to satisfy the constraint GreaterThan(lower_bound=0.0), but found invalid values:
+tensor([[       inf, 9.8785e+37, 0.0000e+00,        inf,        inf,        inf,
+                inf,        inf, 0.0000e+00,        inf],
+        [       inf, 4.8439e+34, 0.0000e+00,        inf,        inf,        inf,
+                inf,        inf, 0.0000e+00,        inf],
+        [       inf, 2.2039e+33, 0.0000e+00,        inf,        inf,        inf,
+                inf,        inf, 0.0000e+00,        inf],
+        [       inf, 5.4206e+35, 0.0000e+00,        inf,        inf,        inf,
+                inf,        inf, 0.0000e+00,        inf],
+        [       inf, 1.0892e+37, 0.0000e+00,        inf,        inf,        inf,
+                inf,        inf, 0.0000e+00,        inf],
+        [       inf, 4.6758e+32, 0.0000e+00,        inf,        inf,        inf,
+                inf,        inf, 0.0000e+00,        inf],
+        [       inf, 9.0272e+33, 0.0000e+00,        inf,        inf,        inf,
+                inf,        inf, 0.0000e+00,        inf],
+        [       inf, 5.4981e+36, 0.0000e+00,        inf,        inf,        inf,
+                inf,        inf, 0.0000e+00,        inf],
+        [       inf, 2.4288e+36, 0.0000e+00,        inf,        inf,        inf,
+                inf,        inf, 0.0000e+00,        inf],
+        [       inf, 1.3653e+37, 0.0000e+00,        inf,        inf,        inf,
+                inf,        inf, 0.0000e+00,        inf],
+        [       inf, 5.0948e+34, 0.0000e+00,        inf,        inf,        inf,
+                inf,        inf, 0.0000e+00,        inf],
+        [       inf, 6.5829e+36, 0.0000e+00,        inf,        inf,        inf,
+                inf,        inf, 0.0000e+00,        inf],
+        [       inf, 1.3700e+36, 0.0000e+00,        inf,        inf,        inf,
+                inf,        inf, 0.0000e+00,        inf],
+        [       inf, 2.3659e+37, 0.0000e+00,        inf,        inf,        inf,
+                inf,        inf, 0.0000e+00,        inf],
+        [       inf, 1.0415e+36, 0.0000e+00,        inf,        inf,        inf,
+                inf,        inf, 0.0000e+00,        inf],
+        [       inf, 1.2262e+36, 0.0000e+00,        inf,        inf,        inf,
+                inf,        inf, 0.0000e+00,        inf],
+        [       inf, 9.7199e+32, 0.0000e+00,        inf,        inf,        inf,
+                inf,        inf, 0.0000e+00,        inf],
+        [       inf, 4.6506e+36, 0.0000e+00,        inf,        inf,        inf,
+                inf,        inf, 0.0000e+00,        inf],
+        [       inf, 2.2770e+36, 0.0000e+00,        inf,        inf,        inf,
+                inf,        inf, 0.0000e+00,        inf],
+        [       inf, 8.1583e+36, 0.0000e+00,        inf,        inf,        inf,
+                inf,        inf, 0.0000e+00,        inf],
+        [       inf, 1.5464e+34, 0.0000e+00,        inf,        inf,        inf,
+                inf,        inf, 0.0000e+00,        inf],
+        [       inf, 2.3963e+33, 0.0000e+00,        inf,        inf,        inf,
+                inf,        inf, 0.0000e+00,        inf],
+        [       inf, 2.7482e+34, 0.0000e+00,        inf,        inf,        inf,
+                inf,        inf, 0.0000e+00,        inf],
+        [       inf, 1.5354e+35, 0.0000e+00,        inf,        inf,        inf,
+                inf,        inf, 0.0000e+00,        inf],
+        [       inf, 7.8972e+35, 0.0000e+00,        inf,        inf,        inf,
+                inf,        inf, 0.0000e+00,        inf],
+        [       inf,        inf, 0.0000e+00,        inf,        inf,        inf,
+                inf,        inf, 0.0000e+00,        inf],
+        [       inf, 1.8059e+34, 0.0000e+00,        inf,        inf,        inf,
+                inf,        inf, 0.0000e+00,        inf],
+        [       inf, 5.1120e+37, 0.0000e+00,        inf,        inf,        inf,
+                inf,        inf, 0.0000e+00,        inf],
+        [       inf, 2.9010e+34, 0.0000e+00,        inf,        inf,        inf,
+                inf,        inf, 0.0000e+00,        inf],
+        [       inf, 2.8991e+34, 0.0000e+00,        inf,        inf,        inf,
+                inf,        inf, 0.0000e+00,        inf],
+        [       inf, 1.6432e+36, 0.0000e+00,        inf,        inf,        inf,
+                inf,        inf, 0.0000e+00,        inf],
+        [       inf, 1.5102e+34, 0.0000e+00,        inf,        inf,        inf,
+                inf,        inf, 0.0000e+00,        inf]], device='cuda:0',
+       grad_fn=<ExpBackward0>)

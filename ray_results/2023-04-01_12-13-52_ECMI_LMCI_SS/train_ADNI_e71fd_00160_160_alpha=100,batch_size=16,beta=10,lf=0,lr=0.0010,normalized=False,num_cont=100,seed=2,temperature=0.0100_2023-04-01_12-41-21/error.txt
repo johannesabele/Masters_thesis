@@ -1,0 +1,34 @@
+Failure # 1 (occurred at 2023-04-01_12-45-23)
+[36mray::ImplicitFunc.train()[39m (pid=1555507, ip=172.29.16.1, repr=func)
+  File "/home/johannes/anaconda3/lib/python3.9/site-packages/ray/tune/trainable/trainable.py", line 367, in train
+    raise skipped from exception_cause(skipped)
+  File "/home/johannes/anaconda3/lib/python3.9/site-packages/ray/tune/trainable/function_trainable.py", line 335, in entrypoint
+    return self._trainable_func(
+  File "/home/johannes/anaconda3/lib/python3.9/site-packages/ray/tune/trainable/function_trainable.py", line 652, in _trainable_func
+    output = fn()
+  File "/tmp/ipykernel_1542220/2315748030.py", line 37, in train_ADNI
+  File "/tmp/ipykernel_1542220/2248850807.py", line 49, in train
+  File "/home/johannes/anaconda3/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/tmp/ipykernel_1542220/3087974896.py", line 96, in forward
+  File "<string>", line 2, in f
+  File "/home/johannes/anaconda3/lib/python3.9/site-packages/probtorch/stochastic.py", line 275, in variable
+    dist = Dist(*args, **kwargs)
+  File "/home/johannes/anaconda3/lib/python3.9/site-packages/torch/distributions/normal.py", line 54, in __init__
+    super(Normal, self).__init__(batch_shape, validate_args=validate_args)
+  File "/home/johannes/anaconda3/lib/python3.9/site-packages/torch/distributions/distribution.py", line 55, in __init__
+    raise ValueError(
+ValueError: Expected parameter scale (Tensor of shape (16, 100)) of distribution Normal(loc: torch.Size([16, 100]), scale: torch.Size([16, 100])) to satisfy the constraint GreaterThan(lower_bound=0.0), but found invalid values:
+tensor([[       inf, 1.3357e+22, 7.0783e+22,  ...,        inf,        inf,
+         1.2251e-02],
+        [       inf, 9.7297e+21, 3.3636e+22,  ...,        inf,        inf,
+         1.4349e-02],
+        [       inf, 1.7660e+22, 1.0419e+23,  ...,        inf,        inf,
+         1.0733e-02],
+        ...,
+        [       inf, 5.4456e+22, 1.5958e+24,  ...,        inf,        inf,
+         4.3884e-03],
+        [       inf, 9.8096e+21, 3.3588e+22,  ...,        inf,        inf,
+         1.4315e-02],
+        [       inf, 1.1698e+22, 5.0807e+22,  ...,        inf,        inf,
+         1.4238e-02]], device='cuda:0', grad_fn=<ExpBackward0>)

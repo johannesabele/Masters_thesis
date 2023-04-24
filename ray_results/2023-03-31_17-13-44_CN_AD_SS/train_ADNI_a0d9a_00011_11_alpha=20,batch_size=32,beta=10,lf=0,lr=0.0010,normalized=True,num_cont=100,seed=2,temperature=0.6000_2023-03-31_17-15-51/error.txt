@@ -1,0 +1,19 @@
+Failure # 1 (occurred at 2023-03-31_17-18-08)
+[36mray::ImplicitFunc.train()[39m (pid=1345435, ip=172.29.16.1, repr=func)
+  File "/home/johannes/anaconda3/lib/python3.9/site-packages/ray/tune/trainable/trainable.py", line 367, in train
+    raise skipped from exception_cause(skipped)
+  File "/home/johannes/anaconda3/lib/python3.9/site-packages/ray/tune/trainable/function_trainable.py", line 335, in entrypoint
+    return self._trainable_func(
+  File "/home/johannes/anaconda3/lib/python3.9/site-packages/ray/tune/trainable/function_trainable.py", line 652, in _trainable_func
+    output = fn()
+  File "/tmp/ipykernel_1343322/2315748030.py", line 37, in train_ADNI
+  File "/tmp/ipykernel_1343322/2248850807.py", line 49, in train
+  File "/home/johannes/anaconda3/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/tmp/ipykernel_1343322/3087974896.py", line 96, in forward
+  File "<string>", line 2, in f
+  File "/home/johannes/anaconda3/lib/python3.9/site-packages/probtorch/stochastic.py", line 291, in variable
+    self[name] = node
+  File "/home/johannes/anaconda3/lib/python3.9/site-packages/probtorch/stochastic.py", line 185, in __setitem__
+    raise ValueError("NaN log prob encountered in node"
+ValueError: NaN log prob encountered in nodewith name: cont

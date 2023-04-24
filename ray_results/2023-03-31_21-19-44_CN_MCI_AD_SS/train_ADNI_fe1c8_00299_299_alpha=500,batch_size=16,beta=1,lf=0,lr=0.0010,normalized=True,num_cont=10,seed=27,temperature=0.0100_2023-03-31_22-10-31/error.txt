@@ -1,0 +1,54 @@
+Failure # 1 (occurred at 2023-03-31_22-14-12)
+[36mray::ImplicitFunc.train()[39m (pid=1425823, ip=172.29.16.1, repr=func)
+  File "/home/johannes/anaconda3/lib/python3.9/site-packages/ray/tune/trainable/trainable.py", line 367, in train
+    raise skipped from exception_cause(skipped)
+  File "/home/johannes/anaconda3/lib/python3.9/site-packages/ray/tune/trainable/function_trainable.py", line 335, in entrypoint
+    return self._trainable_func(
+  File "/home/johannes/anaconda3/lib/python3.9/site-packages/ray/tune/trainable/function_trainable.py", line 652, in _trainable_func
+    output = fn()
+  File "/tmp/ipykernel_1402165/2315748030.py", line 37, in train_ADNI
+  File "/tmp/ipykernel_1402165/2248850807.py", line 49, in train
+  File "/home/johannes/anaconda3/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/tmp/ipykernel_1402165/3087974896.py", line 96, in forward
+  File "<string>", line 2, in f
+  File "/home/johannes/anaconda3/lib/python3.9/site-packages/probtorch/stochastic.py", line 275, in variable
+    dist = Dist(*args, **kwargs)
+  File "/home/johannes/anaconda3/lib/python3.9/site-packages/torch/distributions/normal.py", line 54, in __init__
+    super(Normal, self).__init__(batch_shape, validate_args=validate_args)
+  File "/home/johannes/anaconda3/lib/python3.9/site-packages/torch/distributions/distribution.py", line 55, in __init__
+    raise ValueError(
+ValueError: Expected parameter scale (Tensor of shape (16, 10)) of distribution Normal(loc: torch.Size([16, 10]), scale: torch.Size([16, 10])) to satisfy the constraint GreaterThan(lower_bound=0.0), but found invalid values:
+tensor([[2.7465e-43, 2.0304e-40, 0.0000e+00, 0.0000e+00, 1.3161e-05, 4.2039e-45,
+                inf, 0.0000e+00, 1.4101e-15, 4.1581e-37],
+        [0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00, 6.8886e-07, 0.0000e+00,
+                inf, 0.0000e+00, 1.3933e-18, 2.8026e-44],
+        [0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00, 6.2979e-07, 0.0000e+00,
+                inf, 0.0000e+00, 1.6840e-18, 7.5670e-44],
+        [0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00, 1.4141e-06, 0.0000e+00,
+                inf, 0.0000e+00, 4.5279e-18, 3.8676e-43],
+        [0.0000e+00, 1.4013e-45, 0.0000e+00, 0.0000e+00, 2.9935e-06, 0.0000e+00,
+                inf, 0.0000e+00, 1.6804e-17, 7.3498e-42],
+        [0.0000e+00, 7.0065e-45, 0.0000e+00, 0.0000e+00, 1.7548e-06, 0.0000e+00,
+                inf, 0.0000e+00, 2.1210e-17, 2.5212e-41],
+        [0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00, 8.6272e-07, 0.0000e+00,
+                inf, 0.0000e+00, 7.4430e-19, 4.2039e-45],
+        [0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00, 6.0326e-07, 0.0000e+00,
+                inf, 0.0000e+00, 1.3716e-18, 3.7835e-44],
+        [0.0000e+00, 2.8026e-45, 0.0000e+00, 0.0000e+00, 3.1130e-06, 0.0000e+00,
+                inf, 0.0000e+00, 2.4657e-17, 1.5811e-41],
+        [0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00, 7.4441e-07, 0.0000e+00,
+                inf, 0.0000e+00, 2.0521e-18, 1.0089e-43],
+        [0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00, 4.5326e-07, 0.0000e+00,
+                inf, 0.0000e+00, 4.0083e-19, 1.4013e-45],
+        [0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00, 7.4533e-07, 0.0000e+00,
+                inf, 0.0000e+00, 1.0100e-18, 9.8091e-45],
+        [0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00, 4.2557e-07, 0.0000e+00,
+                inf, 0.0000e+00, 6.2173e-19, 7.0065e-45],
+        [0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00, 1.2586e-06, 0.0000e+00,
+                inf, 0.0000e+00, 4.4353e-18, 5.1848e-43],
+        [0.0000e+00, 0.0000e+00, 0.0000e+00, 0.0000e+00, 6.4206e-07, 0.0000e+00,
+                inf, 0.0000e+00, 1.2122e-18, 2.6625e-44],
+        [0.0000e+00, 1.4013e-45, 0.0000e+00, 0.0000e+00, 3.0271e-06, 0.0000e+00,
+                inf, 0.0000e+00, 1.7172e-17, 7.7310e-42]], device='cuda:0',
+       grad_fn=<ExpBackward0>)

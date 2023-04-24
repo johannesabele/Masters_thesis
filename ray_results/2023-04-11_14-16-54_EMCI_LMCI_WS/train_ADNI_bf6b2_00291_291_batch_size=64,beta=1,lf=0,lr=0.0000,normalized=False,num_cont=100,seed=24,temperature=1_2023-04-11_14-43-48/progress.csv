@@ -1,0 +1,2 @@
+loss,accuracy,time_this_iter_s,done,timesteps_total,episodes_total,training_iteration,trial_id,experiment_id,date,timestamp,time_total_s,pid,hostname,node_ip,time_since_restore,timesteps_since_restore,iterations_since_restore,warmup_time
+-433.2592468261719,0.34375,10.235143423080444,False,,,1,bf6b2_00291,8965420977ff41eb968f63081a6985aa,2023-04-11_14-44-07,1681217047,10.235143423080444,68075,cuda01,172.29.16.1,10.235143423080444,0,1,0.005523204803466797

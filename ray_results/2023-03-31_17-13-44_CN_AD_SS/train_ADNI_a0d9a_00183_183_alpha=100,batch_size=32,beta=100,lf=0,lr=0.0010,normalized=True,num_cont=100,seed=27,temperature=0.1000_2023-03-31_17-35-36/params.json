@@ -1,0 +1,11 @@
+{
+  "alpha": 100,
+  "batch_size": 32,
+  "beta": 100,
+  "lf": 0,
+  "lr": 0.001,
+  "normalized": true,
+  "num_cont": 100,
+  "seed": 27,
+  "temperature": 0.1
+}
