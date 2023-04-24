@@ -2,7 +2,7 @@
 
 This repository contains the source code for the Masters thesis written by Johannes Abele at the Charité - Berlin University of Medicine. The thesis is concerned with modelling the disease severity using semi- and weakly supervised variational autoencoders using data from [ADNI](https://adni.loni.usc.edu/about/). Both implementations are build on the probabilistic programming library [probtorch](https://github.com/probtorch/probtorch). All code can be run if the necessary datasets are available. Those need to be generated using ``ADNI_preprocessing.ipynb`` if one has access to full datasets as provided by ADNI.
 
-Results from the random search for all classification and both supervision types can be found in ``ray_results``.  Some preliminary results can be found in ``Results``. 
+Results from the random search for all classification and both supervision types can be found in ``ray_results``.
 
 ## Copyright under BSD License 2.0
 Copyright 2023 Johannes Abele
